@@ -24,14 +24,10 @@ public class NumberReporterTest {
     }
 
     @Test
-    public void should_report_special_string_when_given_special() throws Exception {
-        HashMap<Integer, String> specialMap = new HashMap<>();
-        specialMap.put(3, "Fizz");
-        specialMap.put(5, "Buzz");
-        specialMap.put(7, "Whizz");
-
-        specialMap.forEach((key, value) -> assertThat(numberReporter.report(key), is(value)));
-
+    public void should_report_special_string_when_given_special() throws Exception { 
+	assertThat(numberReporter.report(3), is("Fizz"));
+	assertThat(numberReporter.report(5), is("Buzz"));
+	assertThat(numberReporter.report(7), is("Whizz"));        
     }
 
     @Test
