@@ -24,14 +24,14 @@ public class NumberReporterTest {
     }
 
     @Test
-    public void should_report_special_string_when_given_special_number() throws Exception { 
+    public void should_report_tag_when_given_special_number() throws Exception { 
 	assertReport(3, "Fizz");
 	assertReport(5, "Buzz");
 	assertReport(7, "Whizz");
 	
     }
     @Test
-    public void should_report_combine_string_when_can_be_mod_by_more_than_one_rule() throws Exception {
+    public void should_report_combine_tag_when_can_be_mod_by_more_than_one_rule() throws Exception {
 	assertReport(15, "FizzBuzz");
 	assertReport(21, "FizzWhizz");
 	assertReport(70, "BuzzWhizz");
@@ -46,7 +46,6 @@ public class NumberReporterTest {
     @Test
     public void should_report_Fizz_when_contains_first_number_and_can_be_mod() throws Exception {
 	assertReport(35, "Fizz"); // 5 * 7
-
     }
 
 
