@@ -16,7 +16,7 @@ public class NumberReporterTest {
     @Test
     public void should_report_fizz_when_given_3() throws Exception {
         NumberReporter numberReporter = new NumberReporter();
-        assertEquals("fizz",numberReporter.reportSpecialNumber(3));
+        assertEquals("fizz",numberReporter.report(3));
 
     }
 
@@ -24,7 +24,14 @@ public class NumberReporterTest {
     @Test
     public void should_report_buzz_when_given_5() throws Exception {
         NumberReporter numberReporter = new NumberReporter();
-        assertEquals("buzz", numberReporter.commonReport(5));
+        assertEquals("buzz", numberReporter.report(5));
+
+    }
+
+    @Test
+    public void should_report_whizz_when_given_7() throws Exception {
+        NumberReporter numberReporter = new NumberReporter();
+        assertEquals("whizz", numberReporter.report(7));
 
     }
 
