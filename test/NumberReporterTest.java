@@ -1,6 +1,8 @@
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import java.util.HashMap;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created by afaren on 9/17/16.
@@ -14,25 +16,14 @@ public class NumberReporterTest {
     }
 
     @Test
-    public void should_report_fizz_when_given_3() throws Exception {
+    public void should_report_special_string_when_given_special() throws Exception {
         NumberReporter numberReporter = new NumberReporter();
-        assertEquals("fizz",numberReporter.report(3));
+        HashMap<Integer, String> specialMap = new HashMap<>();
+        specialMap.put(3, "fizz");
+        specialMap.put(5, "buzz");
+        specialMap.put(7, "whizz");
+
+        specialMap.forEach((key, value) -> assertEquals(value, numberReporter.report(key)));
 
     }
-
-
-    @Test
-    public void should_report_buzz_when_given_5() throws Exception {
-        NumberReporter numberReporter = new NumberReporter();
-        assertEquals("buzz", numberReporter.report(5));
-
-    }
-
-    @Test
-    public void should_report_whizz_when_given_7() throws Exception {
-        NumberReporter numberReporter = new NumberReporter();
-        assertEquals("whizz", numberReporter.report(7));
-
-    }
-
 }
