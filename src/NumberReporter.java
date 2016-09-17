@@ -4,15 +4,17 @@
 public class NumberReporter {
 
 
-
     public Object report(int number) {
-        if(number  % 5 == 0 )
-            return "buzz";
+        String result = "";
         if (number % 3 == 0)
-            return "fizz";
-        if (number % 7 == 0)
-            return "whizz";
+            result += "Fizz";
 
-        return new Integer(number);
+        if (number % 5 == 0)
+            result += "Buzz";
+
+        if (number % 7 == 0)
+            result += "Whizz";
+
+        return result.length() == 0 ? new Integer(number) : result;
     }
 }
