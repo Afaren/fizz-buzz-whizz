@@ -4,15 +4,25 @@
 public class NumberReporter {
 
 
+    private int first;
+    private int second;
+    private int third;
+
+    public NumberReporter(int first, int second, int third) {
+        this.first = first;
+        this.second = second;
+        this.third = third;
+    }
+
     public Object report(int number) {
         String result = "";
-        if (number % 3 == 0)
+        if (number % first == 0)
             result += "Fizz";
 
-        if (number % 5 == 0)
+        if (number % second == 0)
             result += "Buzz";
 
-        if (number % 7 == 0)
+        if (number % third == 0)
             result += "Whizz";
 
         if (contains3(number)) {

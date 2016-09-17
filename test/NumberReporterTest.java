@@ -15,7 +15,7 @@ public class NumberReporterTest {
 
     @Before
     public void setUp() throws Exception {
-        numberReporter = new NumberReporter();
+        numberReporter = new NumberReporter(3, 5, 7);
     }
 
     @Test
