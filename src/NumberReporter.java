@@ -11,4 +11,10 @@ public class NumberReporter {
         return "";
     }
 
+
+    public Object commonReport(int number) {
+        if(number  % 5 == 0 )
+            return "buzz";
+        return "non match";
+    }
 }

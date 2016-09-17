@@ -19,4 +19,13 @@ public class NumberReporterTest {
         assertEquals("fizz",numberReporter.reportSpecialNumber(3));
 
     }
+
+
+    @Test
+    public void should_report_buzz_when_given_5() throws Exception {
+        NumberReporter numberReporter = new NumberReporter();
+        assertEquals("buzz", numberReporter.commonReport(5));
+
+    }
+
 }
