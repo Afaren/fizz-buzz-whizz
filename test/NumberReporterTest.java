@@ -40,4 +40,17 @@ public class NumberReporterTest {
         assertThat(numberReporter.report(21), is("FizzWhizz"));
         assertThat(numberReporter.report(70), is("BuzzWhizz"));
     }
+
+    @Test
+    public void should_report_special_string_when_given_contain_three() throws Exception {
+        assertThat(numberReporter.report(13), is("Fizz"));
+    }
+
+    @Test
+    public void should_report_special_string_when_given_contain_three_and_double_numbers() throws Exception {
+        assertThat(numberReporter.report(35), is("Fizz"));
+        assertThat(numberReporter.report(105), is("FizzBuzzWhizz"));
+    }
+
+
 }

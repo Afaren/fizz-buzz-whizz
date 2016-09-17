@@ -15,6 +15,13 @@ public class NumberReporter {
         if (number % 7 == 0)
             result += "Whizz";
 
+        if (contains3(number)) {
+            return "Fizz";
+        }
         return result.length() == 0 ? new Integer(number) : result;
+    }
+
+    private boolean contains3(int number) {
+        return (number + "").contains("3");
     }
 }
