@@ -15,6 +15,17 @@ public class NumberReporter {
     }
 
     public Object report(int number) {
+
+        String result = modNumberToString(number);
+
+        if (containsFirst(number)) {
+            return "Fizz";
+        }
+
+        return result.length() == 0 ? new Integer(number) : result;
+    }
+
+    private String modNumberToString(int number) {
         String result = "";
         if (number % first == 0)
             result += "Fizz";
@@ -24,14 +35,10 @@ public class NumberReporter {
 
         if (number % third == 0)
             result += "Whizz";
-
-        if (contains3(number)) {
-            return "Fizz";
-        }
-        return result.length() == 0 ? new Integer(number) : result;
+        return result;
     }
 
-    private boolean contains3(int number) {
-        return (number + "").contains("3");
+    private boolean containsFirst(int number) {
+        return (number + "").contains(this.first + "");
     }
 }
