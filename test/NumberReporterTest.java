@@ -16,7 +16,7 @@ public class NumberReporterTest {
     @Test
     public void should_report_fizz_when_given_3() throws Exception {
         NumberReporter numberReporter = new NumberReporter();
-        assertEquals("fizz",numberReporter.report(3));
+        assertEquals("fizz",numberReporter.reportSpecialNumber(3));
 
     }
 }

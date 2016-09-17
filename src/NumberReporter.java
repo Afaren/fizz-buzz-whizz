@@ -3,8 +3,12 @@
  */
 public class NumberReporter {
     public int report(int number) {
-        if (number % 3 == 0)
-            return "fizz";
         return number;
     }
+    public String reportSpecialNumber(int number){
+        if (number % 3 == 0)
+            return "fizz";
+        return "";
+    }
+
 }
