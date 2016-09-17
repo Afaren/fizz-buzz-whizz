@@ -20,16 +20,16 @@ public class NumberReporterTest {
 
     @Test
     public void should_report_1_when_given_1() throws Exception {
-        assertThat(numberReporter.report(1), is(1));
+	assertReport(1, new Integer(1));
     }
 
     @Test
-    public void should_report_special_string_when_given_special() throws Exception { 
-	assertThat(numberReporter.report(3), is("Fizz"));
-	assertThat(numberReporter.report(5), is("Buzz"));
-	assertThat(numberReporter.report(7), is("Whizz"));        
+    public void should_report_special_string_when_given_special_number() throws Exception { 
+	assertReport(3, "Fizz");
+	assertReport(5, "Buzz");
+	assertReport(7, "Whizz");
+	
     }
-
     @Test
     public void should_report_special_string_when_given_double_number() throws Exception {
         assertThat(numberReporter.report(15), is("FizzBuzz"));
@@ -49,4 +49,8 @@ public class NumberReporterTest {
     }
 
 
+    private void assertReport(int number, Object tag){
+	assertThat(numberReporter.report(number), is(tag));
+     }
+    
 }
